@@ -25,10 +25,10 @@ Ensure you have the following installed:
 - MongoDB
 - Git
 
-### Steps
+### Steps (after application finished)
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/task-management-system.git
+   git clone https://github.com/mohammed-tarek-rezk/Taskify.git
    cd task-management-system
    ```
 2. Install dependencies:
@@ -59,5 +59,5 @@ We welcome contributions! Feel free to fork the repository and submit pull reque
 This project is licensed under the MIT License.
 
 ## Contact
-For any inquiries, reach out to the **DEPI Team** at [mohammed.tarek.rezk@gmai.com](mailto:mohammed.tarek.rezk@gmai.com).
+For any inquiries, reach out to the **DEPI Team** at [mohammed.tarek.rezk@gmail.com](mailto:mohammed.tarek.rezk@gmail.com).
 

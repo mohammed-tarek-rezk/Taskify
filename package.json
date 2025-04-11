@@ -1,0 +1,12 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "Welcome to the **Task Management System**, a powerful tool designed to help teams efficiently manage tasks, track progress, and enhance productivity. Graduated project for **DEPI Team group 2**, this system provides an intuitive interface for seamless task coordination and collaboration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

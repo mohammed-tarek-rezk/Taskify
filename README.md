@@ -45,7 +45,50 @@ Ensure you have the following installed:
    npm run dev
    ```
 5. Open `http://localhost:3000` in your browser.
+## Project Structure
 
+```
+taskify/
+├── client/                 # React frontend
+│   ├── public/            # Static files
+│   └── src/               # Source files
+│       ├── components/    # Reusable components
+│       ├── contexts/      # React contexts
+│       ├── pages/         # Page components
+│       └── App.js         # Main App component
+└── server/                # Node.js backend
+    ├── models/           # Mongoose models
+    ├── routes/           # API routes
+    ├── middleware/       # Custom middleware
+    └── server.js         # Server entry point
+```
+## API Endpoints
+
+### Authentication
+- POST /api/auth/register - Register a new user
+- POST /api/auth/login - Login user
+- GET /api/auth/me - Get current user
+
+### Teams
+- GET /api/teams - Get all teams
+- POST /api/teams - Create a new team
+- GET /api/teams/:id - Get team by ID
+- PUT /api/teams/:id - Update team
+- DELETE /api/teams/:id - Delete team
+
+### Projects
+- GET /api/projects - Get all projects
+- POST /api/projects - Create a new project
+- GET /api/projects/:id - Get project by ID
+- PUT /api/projects/:id - Update project
+- DELETE /api/projects/:id - Delete project
+
+### Tasks
+- GET /api/tasks - Get all tasks
+- POST /api/tasks - Create a new task
+- GET /api/tasks/:id - Get task by ID
+- PUT /api/tasks/:id - Update task
+- DELETE /api/tasks/:id - Delete task
 ## Usage
 - Create an account and log in.
 - Add new tasks and assign them to team members.

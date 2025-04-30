@@ -25,26 +25,41 @@ Ensure you have the following installed:
 - MongoDB
 - Git
 
-### Steps (after application finished)
+### Installation
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mohammed-tarek-rezk/Taskify.git
-   cd task-management-system
+   git clone https://github.com/mohammed-tarek-rezk/taskify.git
+   cd taskify
    ```
+
 2. Install dependencies:
    ```bash
+   # Install server dependencies
+   cd server
+   npm install
+
+   # Install client dependencies
+   cd ../client
    npm install
    ```
-3. Set up environment variables (`.env` file):
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
+
+3. Create a `.env` file in the server directory:
    ```
-4. Start the development server:
+   MONGODB_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
+
+4. Start the development servers:
    ```bash
+   # Start server (from server directory)
    npm run dev
+
+   # Start client (from client directory)
+   npm start
    ```
-5. Open `http://localhost:3000` in your browser.
+
 ## Project Structure
 
 ```

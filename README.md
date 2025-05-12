@@ -25,27 +25,85 @@ Ensure you have the following installed:
 - MongoDB
 - Git
 
-### Steps (after application finished)
+### Installation
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mohammed-tarek-rezk/Taskify.git
-   cd task-management-system
+   git clone https://github.com/mohammed-tarek-rezk/taskify.git
+   cd taskify
    ```
+
 2. Install dependencies:
    ```bash
+   # Install server dependencies
+   cd server
+   npm install
+
+   # Install client dependencies
+   cd ../client
    npm install
    ```
-3. Set up environment variables (`.env` file):
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-5. Open `http://localhost:3000` in your browser.
 
+3. Create a `.env` file in the server directory:
+   ```
+   MONGODB_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
+
+4. Start the development servers:
+   ```bash
+   # Start server (from server directory)
+   npm run dev
+
+   # Start client (from client directory)
+   npm start
+   ```
+
+## Project Structure
+
+```
+taskify/
+├── client/                 # React frontend
+│   ├── public/            # Static files
+│   └── src/               # Source files
+│       ├── components/    # Reusable components
+│       ├── contexts/      # React contexts
+│       ├── pages/         # Page components
+│       └── App.js         # Main App component
+└── server/                # Node.js backend
+    ├── models/           # Mongoose models
+    ├── routes/           # API routes
+    ├── middleware/       # Custom middleware
+    └── server.js         # Server entry point
+```
+## API Endpoints
+
+### Authentication
+- POST /api/auth/register - Register a new user
+- POST /api/auth/login - Login user
+- GET /api/auth/me - Get current user
+
+### Teams
+- GET /api/teams - Get all teams
+- POST /api/teams - Create a new team
+- GET /api/teams/:id - Get team by ID
+- PUT /api/teams/:id - Update team
+- DELETE /api/teams/:id - Delete team
+
+### Projects
+- GET /api/projects - Get all projects
+- POST /api/projects - Create a new project
+- GET /api/projects/:id - Get project by ID
+- PUT /api/projects/:id - Update project
+- DELETE /api/projects/:id - Delete project
+
+### Tasks
+- GET /api/tasks - Get all tasks
+- POST /api/tasks - Create a new task
+- GET /api/tasks/:id - Get task by ID
+- PUT /api/tasks/:id - Update task
+- DELETE /api/tasks/:id - Delete task
 ## Usage
 - Create an account and log in.
 - Add new tasks and assign them to team members.
